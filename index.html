@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Vinayak Adagatala | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">Nikhil<span>.dev</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle" id="theme-btn">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Nikhil Vinayak Adagatala" class="profile-img">
+            </div>
+            <h1>Hi, I'm <span class="highlight">Nikhil Vinayak Adagatala</span></h1>
+            <p class="tagline"><span id="typing-text"></span></p>
+            <a href="#projects" class="btn-primary">View My Work</a>
+        </div>
+        <div class="scroll-down"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>I am a passionate B.Tech Computer Science student at <strong>MIT Vishwaprayag University (MIT VPU)</strong>. My focus lies in building scalable web applications and solving complex algorithmic problems. I thrive on learning new technologies and turning creative ideas into functional code.</p>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <h3>B.Tech in Computer Science</h3>
+                        <p>MIT Vishwaprayag University | 2022 - Present</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-container">
+                <h3>Technical Skills</h3>
+                <div class="skill-bar"><div class="info"><span>C / C++</span><span>90%</span></div><div class="bar"><span class="c-cpp"></span></div></div>
+                <div class="skill-bar"><div class="info"><span>Java</span><span>85%</span></div><div class="bar"><span class="java"></span></div></div>
+                <div class="skill-bar"><div class="info"><span>HTML/CSS</span><span>95%</span></div><div class="bar"><span class="html-css"></span></div></div>
+                <div class="skill-bar"><div class="info"><span>JavaScript</span><span>80%</span></div><div class="bar"><span class="js"></span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Smart E-Learning Platform</h3>
+                    <p>A web-based solution for personalized student tracking using HTML, CSS, and JS.</p>
+                    <a href="#" class="btn-secondary">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>A modern, responsive portfolio with interactive glassmorphism UI elements.</p>
+                    <a href="#" class="btn-secondary">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Algorithm Visualizer</h3>
+                    <p>Visualizing sorting algorithms to help students understand data structures better.</p>
+                    <a href="#" class="btn-secondary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="#certificates" class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-item"><img src="cert1.jpg" alt="Coursera Certificate" onclick="openModal(this.src)"></div>
+            <div class="cert-item"><img src="cert2.jpg" alt="Certificate 2" onclick="openModal(this.src)"></div>
+            <div class="cert-item"><img src="cert3.jpg" alt="Certificate 3" onclick="openModal(this.src)"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-wrapper">
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot UI -->
+    <div id="chatbot">
+        <div id="chat-header"><span>Nikhil's Assistant</span><i class="fas fa-minus" id="close-chat"></i></div>
+        <div id="chat-body">
+            <div class="bot-msg">Hi there! How can I help you today?</div>
+        </div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div id="chat-toggle"><i class="fas fa-comment-dots"></i></div>
+
+    <!-- Modal for Certificates -->
+    <div id="modal" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Back to top -->
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
